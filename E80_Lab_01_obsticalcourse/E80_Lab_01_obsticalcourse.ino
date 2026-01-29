@@ -43,6 +43,7 @@ Printer printer;
 // loop start recorder
 int loopStartTime;
 
+
 void setup() {
   printer.init();
 
@@ -60,13 +61,20 @@ void setup() {
   /* Keep track of time */
   printer.printMessage("Starting main loop",10);
   loopStartTime = millis();
+  /*Durations of steps of robot instructions, start is delay untill steps begin*/
+  
+
+  
 }
 
 
 void loop() {
 
   int currentTime = millis() - loopStartTime;
-  
+  int StartTime=20000;
+  int step1Time=2000;
+  int step2Time=3500;
+  int step3Time=3000;
   ///////////  Don't change code above here! ////////////////////
   // write code here to make the robot fire its motors in the sequence specified in the lab manual 
   // the currentTime variable contains the number of ms since the robot was turned on 
@@ -74,9 +82,17 @@ void loop() {
   //       void motorDriver.drive(int motorA_power,int motorB_power,int motorC_power); 
   // the value of motorX_power can range from -255 to 255, and sets the PWM applied to the motor 
   // The following example will turn on motor B for four seconds between seconds 4 and 8 
-  if (currentTime > 4000 && currentTime <8000) {
-    motorDriver.drive(0,120,0);
-  } else {
+  
+  if (currentTime > StartTime && currentTime <(StartTime+step1Time)) {
+    motorDriver.drive(0,0,-100);
+  }
+  if (currentTime > (StartTime+step1Time) && currentTime <(StartTime+step1Time+step2Time)) {
+    motorDriver.drive(150,150,0);
+  } 
+   if (currentTime > (StartTime+step1Time+step2Time) && currentTime <(StartTime+step1Time+step2Time+step3Time)) {
+    motorDriver.drive(0,0,100);
+  } 
+  else {
     motorDriver.drive(0,0,0);
   }
 
