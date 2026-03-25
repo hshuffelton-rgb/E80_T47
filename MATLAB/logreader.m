@@ -73,6 +73,6 @@ ylabel('meters per second^2')
 %% X accel through course
 %axis([,]);
 plot(mpsX);
-title('obstical course X');
+title('obstacle course X');
 ylabel('meters per second^2')
 
