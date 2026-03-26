@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '005'; % file number for the data you want to read
+filenum = '011'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
@@ -45,34 +45,34 @@ for i=1:numel(varTypes)
 end
 fclose(fid);
 
-%% Process your data here 
-mpsX=accelX*(9.8/1000)
-mpsY=accelY*(9.8/1000)
-mpsZ=accelZ*(9.8/1000)
-%% Tripple plot for zero axis
-subplot(3,1,1);
-%axis([,]);
-plot(mpsX);
-title('Zero X');
-ylabel('meters per second^2')
-subplot(3,1,2);
-%axis([,]);
-plot(mpsY);
-title('Zero Y');
-ylabel('meters per second^2')
-subplot(3,1,3);
-%axis([,]);
-plot(mpsZ);
-title('Zero Y');
-ylabel('meters per second^2')
-%% Z accel at 1g
-plot(mpsZ);
-title('accelerated Z');
-ylabel('meters per second^2')
-%axis([,])
-%% X accel through course
-%axis([,]);
-plot(mpsX);
-title('obstacle course X');
-ylabel('meters per second^2')
+% %% Process your data here 
+% mpsX=accelX*(9.8/1000)
+% mpsY=accelY*(9.8/1000)
+% mpsZ=accelZ*(9.8/1000)
+% %% Tripple plot for zero axis
+% subplot(3,1,1);
+% %axis([,]);
+% plot(mpsX);
+% title('Zero X');
+% ylabel('meters per second^2')
+% subplot(3,1,2);
+% %axis([,]);
+% plot(mpsY);
+% title('Zero Y');
+% ylabel('meters per second^2')
+% subplot(3,1,3);
+% %axis([,]);
+% plot(mpsZ);
+% title('Zero Y');
+% ylabel('meters per second^2')
+% %% Z accel at 1g
+% plot(mpsZ);
+% title('accelerated Z');
+% ylabel('meters per second^2')
+% %axis([,])
+% %% X accel through course
+% %axis([,]);
+% plot(mpsX);
+% title('obstacle course X');
+% ylabel('meters per second^2')
 
