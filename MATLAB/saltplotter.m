@@ -4,7 +4,7 @@ t = 1:length(A2);
 A2volts = double(A2) * 0.00322;
 A3volts = double(A3) * 0.00322;
 
-figure(1);
+figure(2);
 plot(t, A2volts, 'r', t, A3volts, 'b');
 ylabel('Volts (V)');
 xlabel('Sample Number');
