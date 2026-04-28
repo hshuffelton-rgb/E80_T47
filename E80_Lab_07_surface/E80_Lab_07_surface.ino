@@ -132,9 +132,12 @@ void loop() {
   //     motor_driver.drive(surface_control.uL,surface_control.uR,70);
   //   }
   // }
-  if (currentTime>90 && currentTime<120000){
-    motor_driver.drive(0,0,65);
+  if (currentTime>30000 && currentTime<40000){
+    motor_driver.drive(0,0,110);
   }
+   else if (currentTime>70000 && currentTime<80000){
+    motor_driver.drive(50,-50,0);
+   }
   else {
     motor_driver.drive(0,0,0);
   }

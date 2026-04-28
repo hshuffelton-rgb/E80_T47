@@ -4,7 +4,7 @@
 clear;
 %clf;
 
-filenum = '020'; % file number for the data you want to read
+filenum = '021'; % file number for the data you want to read
 infofile = strcat('INF', filenum, '.TXT');
 datafile = strcat('LOG', filenum, '.BIN');
 
@@ -50,5 +50,4 @@ fclose(fid);
 %% Tripple plot for zero axis
 
 %% X accel through course
-
 
